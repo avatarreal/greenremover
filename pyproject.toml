@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "greenremover"
+version = "0.1.0"
+description = "A lightweight Python tool for removing green screen backgrounds from images, converting them into transparent PNGs for easy compositing and editing."
+readme = "README.md"
+authors = [
+    { name = "avatarreal", email = "avatarreal@users.noreply.github.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "numpy<2.0.0",
+    "pillow>=10.0.0,<11.0.0",
+]
+keywords = ["green screen", "chroma key", "background removal", "image processing"]
+
+[project.urls]
+Homepage = "https://github.com/avatarreal/greenremover"
+"Bug Tracker" = "https://github.com/avatarreal/greenremover/issues"
+
+[project.scripts]
+greenremover = "greenremover.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "ruff",
+    "black",
+    "mypy",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "-ra -q"
+
+[tool.mypy]
+packages = ["greenremover"]
+
+# 忽略 tests 目录（测试代码不强制类型）
+exclude = ["tests"]
+
+# 允许使用未注解的库（避免第三方依赖没类型提示时报错）
+ignore_missing_imports = true
+
+# 输出更友好的错误信息
+pretty = true
+show_error_codes = true
+
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["greenremover"]
