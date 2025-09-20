@@ -112,8 +112,10 @@ greenremover/
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.
-You are free to use, modify, and distribute it under the same license terms.
+This project is open-sourced under the [MIT License](LICENSE).  
+You are free to use, modify, and distribute this project, but you must retain the original license notice.  
+
+> Note: This is a summary. In case of conflict, the terms in the [LICENSE](LICENSE) file (English text) shall prevail.
 
 ---
 
@@ -122,15 +124,6 @@ You are free to use, modify, and distribute it under the same license terms.
 * [Pillow](https://python-pillow.org/) — Imaging library
 * [NumPy](https://numpy.org/) — Numerical computing
 * Open source community ❤️
-
----
-
-## 📜 License
-
-This project is open-sourced under the [MIT License](LICENSE).  
-You are free to use, modify, and distribute this project, but you must retain the original license notice.  
-
-> Note: This is a summary. In case of conflict, the terms in the [LICENSE](LICENSE) file (English text) shall prevail.
 
 ---
 
